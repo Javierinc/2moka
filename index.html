@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Moka</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html">MOkA</a>
+    </header>
+    <main>
+        <section class="main-container">
+            <section class="form-container">
+                <form id="form">
+                    <label>Tu objetivo</label>
+                    <p id="goal-ren"></p>
+                    <div id="container-radios" class="container-block">
+                        <div class="item-radio">
+                            <label for="ahorro">Ahorro</label>
+                            <input type="radio" name="goal" id="ahorro" value="Ahorro">
+                        </div>
+                        <div class="item-radio">
+                            <label for="inversion">Inversion</label>
+                            <input type="radio" name="goal" id="inversion" value="Inversión">
+                        </div>
+                        <div class="item-radio">
+                            <label for="jubilacion">Jubilación</label>
+                            <input type="radio" name="goal" id="jubilacion" value="Jubilación">
+                        </div>
+                    </div>
+                    <label for="years">Durante</label>
+                    <p id="years-ren">1 año</p>
+                    <input type="range" name="years" id="years" min="1" max="70" value="1">
+                    <label for="initial">Si empezaras con</label>
+                    <input type="text" name="initial" id="initial">
+                    <label for="monthly">Y al mes depositaras</label>
+                    <input type="text" name="monthly" id="monthly">
+                    <label for="profile">Riesgo</label>
+                    <select name="" id="profile">
+                        <option value="0">Conservador</option>
+                        <option value="1">Moderado</option>
+                        <option value="2">Arriesgado</option>
+                    </select>
+                    <p id="alert"></p>
+                    <button id="btn-cal" type="submit">Simular</button>
+                </form>
+            </section>
+            <section class="simulation-container hiden-container">
+                <div class="realistic-scenario">
+                    <div class="realistic-heading">
+                        <p id="result-years"></p>
+                        <p>¿Cómo se calcula?</p>
+                    </div>
+                    <p id="result-realistic"></p>
+                </div>
+                <div class="scenarios-container">
+                    <div>
+                        <p>Habrías invertido</p>
+                        <p id="result-total"></p>
+                    </div>
+                    <div>
+                        <p>Escenario optimista</p>
+                        <p id="result-optimistic"></p>
+                    </div>
+                    <div>
+                        <p>Escenario pesimista</p>
+                        <p id="result-pessimistic"></p>
+                    </div>
+                </div>
+                <div class="graph">
+
+                </div>
+            </section>
+        </section>
+        <section class="user-simulations-container hiden-container">
+            <h2 id="heading-port">Simulaciones de tu portafolio 💵</h2>
+            <section class="user-simulations">
+            </section>
+        </section>
+
+    </main>
+    <footer>
+        <p id="agf">Administradora General de Fondos - Regulada por la CMF</p>
+        <p id="copyright">Copyright &copy; 2022 by <span id="moka">MOkA</span></p>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+</html>
